@@ -97,6 +97,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.2.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.performance.profile-analyzer": {
       "version": "1.2.2",
       "depth": 1,
@@ -264,6 +271,17 @@
         "com.unity.xr.management": "4.2.0"
       },
       "url": "https://packages.unity.com"
+    },
+    "org.khronos.unitygltf": {
+      "version": "2.9.1-rc",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "2.0.0",
+        "com.unity.modules.imageconversion": "1.0.0",
+        "com.unity.shadergraph": "10.0.0"
+      },
+      "url": "https://packages.needle.tools"
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

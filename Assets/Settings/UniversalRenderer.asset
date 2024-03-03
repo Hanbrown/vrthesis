@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852a483983746bf4e957145f30672605, type: 3}
   m_Name: OilPaintingEffect
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     anisotropicKuwaharaFilterSettings:
       filterKernelSectors: 8
