@@ -16,6 +16,7 @@
     "com.unity.xr.interaction.toolkit": "2.4.3",
     "com.unity.xr.management": "4.3.3",
     "com.unity.xr.oculus": "3.3.0",
+    "org.khronos.unitygltf": "2.9.1-rc",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -46,8 +47,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "org.khronos.unitygltf": "2.9.1-rc"
+    "com.unity.modules.xr": "1.0.0"
   },
   "scopedRegistries": [
     {
