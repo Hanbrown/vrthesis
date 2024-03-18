@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   color:
     m_OverrideState: 0
     m_Value: {r: 0, g: 0, b: 0, a: 1}
@@ -188,17 +188,17 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0
-          inSlope: 1
-          outSlope: 1
+          inSlope: 1.0038787
+          outSlope: 1.0038787
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 0.2349914
-          value: 0.2341463
-          inSlope: 1
-          outSlope: 1
+          time: 0.030826718
+          value: 0.030939028
+          inSlope: 1.0034124
+          outSlope: 1.0034124
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
