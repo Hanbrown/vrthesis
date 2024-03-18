@@ -17,6 +17,7 @@ public class PostProcessControls : MonoBehaviour
     
     private ColorCurves _colorcurves;
     private Vector3 initialTransform;
+    private Quaternion initialCameraRotation;
 
     private Vector3 initalParentForward;
     private float originalParentRotation;
@@ -33,6 +34,8 @@ public class PostProcessControls : MonoBehaviour
         initialTransform = _camera.forward;
         denominator = maxAngle - referenceAngle;
 
+        initialCameraRotation = _camera.localRotation;
+
         initalParentForward = _camera.root.forward;
         originalParentRotation = _camera.root.rotation.eulerAngles.y;
 
@@ -46,18 +49,9 @@ public class PostProcessControls : MonoBehaviour
     void Update()
     {
         Vector3 newUp = _camera.forward;
-        //float offset = originalParentRotation - _camera.root.rotation.eulerAngles.y; // Change in parent's rotation
-        float newAngle = Vector3.Angle(initialTransform, newUp); // Remove influence of parent's rotation
+        Quaternion newCameraRotation = _camera.localRotation;
 
-        // Calculate offset for when parent rotates
-        Vector3 newParentForward = _camera.root.forward;
-        float angle1 = Vector3.Angle(initalParentForward, initialTransform);
-        //float parentDelta = Vector3.Angle(initalParentForward, newParentForward);
-
-        Vector3 tempNew = Quaternion.AngleAxis(angle1, _camera.root.right) * newParentForward;
-        float angle2 = Vector3.Angle(tempNew, initialTransform) / 2;
-
-        newAngle += angle2;
+        float newAngle = Quaternion.Angle(initialCameraRotation, newCameraRotation);
 
         if (newAngle > referenceAngle) {
 
@@ -65,7 +59,7 @@ public class PostProcessControls : MonoBehaviour
             float transition = (newAngle - referenceAngle) / denominator;
             transition = originalRedKeyframe.value + Mathf.Min(transition, 1.0f-originalRedKeyframe.value);
 
-            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + tempNew.ToString());
+            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
 
             // Adjust color curve accordingly
             Keyframe newKey = originalRedKeyframe;
@@ -74,7 +68,7 @@ public class PostProcessControls : MonoBehaviour
         }
         else
         {
-            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + tempNew.ToString());
+            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
         }
     }
 }
