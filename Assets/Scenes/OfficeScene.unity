@@ -7215,7 +7215,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311806291}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &311806296
 Camera:
   m_ObjectHideFlags: 0
@@ -7223,7 +7223,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311806291}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -14371,7 +14371,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739921405}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &739921409
 Camera:
   m_ObjectHideFlags: 0
@@ -14379,7 +14379,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739921405}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -40104,6 +40104,7 @@ GameObject:
   - component: {fileID: 7125193275576297385}
   - component: {fileID: 8066999598993817959}
   - component: {fileID: 1393697188945781439}
+  - component: {fileID: 8066999598993817960}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -44679,6 +44680,20 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4252634801924157702}
+  m_Mesh: {fileID: 3139885659240253314, guid: 32ad64e52fcd4e246918e4249040feba, type: 3}
+--- !u!64 &8066999598993817960
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4252634801924157702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 3139885659240253314, guid: 32ad64e52fcd4e246918e4249040feba, type: 3}
 --- !u!23 &8071213400716581798
 MeshRenderer:
