@@ -48,6 +48,7 @@ ExportedObj/
 *.VC.db
 
 the_office.glb
+*.wav
 
 # Unity3D generated meta files
 *.pidb.meta

@@ -12,23 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852a483983746bf4e957145f30672605, type: 3}
   m_Name: OilPaintingEffect
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     anisotropicKuwaharaFilterSettings:
       filterKernelSectors: 8
-      filterKernelSmoothness: 0.423
-      filterRadius: 5.09
-      filterSharpness: 6.22
-      eccentricity: 1.35
-      iterations: 2
+      filterKernelSmoothness: 0.33
+      filterRadius: 4
+      filterSharpness: 8
+      eccentricity: 1
+      iterations: 1
     edgeFlowSettings:
-      noiseTexture: {fileID: 2800000, guid: 418137250f254a44caf813088ed60c44, type: 3}
-      streamLineLength: 19
-      streamKernelStrength: 0.362
+      noiseTexture: {fileID: 0}
+      streamLineLength: 10
+      streamKernelStrength: 0.5
     compositorSettings:
-      edgeContribution: 0.63
-      flowContribution: 1.88
-      depthContribution: 1.29
+      edgeContribution: 1
+      flowContribution: 1
+      depthContribution: 1
       bumpPower: 0.8
       bumpIntensity: 0.4
 --- !u!114 &11400000

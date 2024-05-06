@@ -59,7 +59,7 @@ public class PostProcessControls : MonoBehaviour
             float transition = (newAngle - referenceAngle) / denominator;
             transition = originalRedKeyframe.value + Mathf.Min(transition, 1.0f-originalRedKeyframe.value);
 
-            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
+            //Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
 
             // Adjust color curve accordingly
             Keyframe newKey = originalRedKeyframe;
@@ -68,7 +68,7 @@ public class PostProcessControls : MonoBehaviour
         }
         else
         {
-            Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
+            //Debug.Log(newAngle + "      " + newUp.ToString() + "       " + initialTransform.ToString() + "        " + _camera.localEulerAngles);
         }
     }
 }

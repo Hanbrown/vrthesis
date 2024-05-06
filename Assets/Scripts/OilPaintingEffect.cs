@@ -224,3 +224,36 @@ public class OilPaintingEffect : ScriptableRendererFeature
         public float bumpIntensity = 0.4f;
     }
 }
+
+//using System;
+//using UnityEngine;
+//using UnityEngine.Rendering;
+//using UnityEngine.Rendering.Universal;
+//using UnityEngine.Rendering.Universal.Internal;
+
+//public class OilPaintingEffect : ScriptableRendererFeature
+//{
+//    public Settings settings;
+
+//    private OilPaintingEffectPass renderPass;
+
+//    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
+//    {
+//        renderPass.Setup(settings);
+//        renderer.EnqueuePass(renderPass);
+//    }
+
+//    public override void Create()
+//    {
+//        var structureTensorMaterial = CoreUtils.CreateEngineMaterial("Hidden/Oil Painting/Sobel");
+
+//        renderPass = new OilPaintingEffectPass(structureTensorMaterial);
+//        renderPass.renderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+//    }
+
+//    [Serializable]
+//    public class Settings
+//    {
+
+//    }
+//}
