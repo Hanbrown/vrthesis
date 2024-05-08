@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 public class OilPaintingEffectPass : ScriptableRenderPass
 {
@@ -15,6 +16,8 @@ public class OilPaintingEffectPass : ScriptableRenderPass
     private readonly Material kuwaharaFilterMaterial;
     private readonly Material lineIntegralConvolutionMaterial;
     private readonly Material compositorMaterial;
+
+    private double timeSinceStartup = Time.timeAsDouble;
 
     private int kuwaharaFilterIterations = 1;
 
@@ -45,7 +48,7 @@ public class OilPaintingEffectPass : ScriptableRenderPass
         kuwaharaFilterMaterial.SetFloat("_Eccentricity", kuwaharaFilterSettings.eccentricity);
         kuwaharaFilterIterations = kuwaharaFilterSettings.iterations;
     }
-
+    
     private void SetupLineIntegralConvolution(OilPaintingEffect.EdgeFlowSettings edgeFlowSettings)
     {
         lineIntegralConvolutionMaterial.SetTexture("_NoiseTex", edgeFlowSettings.noiseTexture);
@@ -81,6 +84,10 @@ public class OilPaintingEffectPass : ScriptableRenderPass
     {
         CommandBuffer cmd = CommandBufferPool.Get("Oil Painting Effect");
 
+        if (Time.timeAsDouble - timeSinceStartup >= 10)
+        {
+            kuwaharaFilterMaterial.SetFloat("_FilterRadius", 0.1f);
+        }
         Blit(cmd, source, structureTensorTex, structureTensorMaterial, -1);
 
         kuwaharaFilterMaterial.SetTexture("_StructureTensorTex", structureTensorTex);

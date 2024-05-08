@@ -17,10 +17,10 @@ MonoBehaviour:
     anisotropicKuwaharaFilterSettings:
       filterKernelSectors: 8
       filterKernelSmoothness: 0.33
-      filterRadius: 4
+      filterRadius: 6.99
       filterSharpness: 8
-      eccentricity: 1
-      iterations: 1
+      eccentricity: 0.63
+      iterations: 2
     edgeFlowSettings:
       noiseTexture: {fileID: 0}
       streamLineLength: 10
